@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cda289e3-c1b7-4ebb-86d9-c3d7d5a4f7e2": {
+      "ProjectGuid": "cda289e3-c1b7-4ebb-86d9-c3d7d5a4f7e2",
+      "DisplayName": "05_Polymorphism",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "6a40fd3f-d446-4c7c-9465-164ce3125850": {
+      "ProjectGuid": "6a40fd3f-d446-4c7c-9465-164ce3125850",
+      "DisplayName": "05_Polymorphism",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

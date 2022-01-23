@@ -1,0 +1,15 @@
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\obj\Debug\net6.0\05_Polymorphism.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\obj\Debug\net6.0\05_Polymorphism.AssemblyInfoInputs.cache
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\obj\Debug\net6.0\05_Polymorphism.AssemblyInfo.cs
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\obj\Debug\net6.0\05_Polymorphism.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\bin\Debug\net6.0\05_Polymorphism.exe
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\bin\Debug\net6.0\05_Polymorphism.deps.json
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\bin\Debug\net6.0\05_Polymorphism.runtimeconfig.json
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\bin\Debug\net6.0\05_Polymorphism.dll
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\bin\Debug\net6.0\ref\05_Polymorphism.dll
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\bin\Debug\net6.0\05_Polymorphism.pdb
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\obj\Debug\net6.0\05_Polymorphism.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\obj\Debug\net6.0\05_Polymorphism.dll
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\obj\Debug\net6.0\ref\05_Polymorphism.dll
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\obj\Debug\net6.0\05_Polymorphism.pdb
+C:\Users\Hp\source\repos\C_Sharp\05_Polymorphism\05_Polymorphism\obj\Debug\net6.0\05_Polymorphism.genruntimeconfig.cache
