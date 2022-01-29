@@ -1,0 +1,15 @@
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\obj\Debug\net6.0\06_Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\obj\Debug\net6.0\06_Interfaces.AssemblyInfoInputs.cache
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\obj\Debug\net6.0\06_Interfaces.AssemblyInfo.cs
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\obj\Debug\net6.0\06_Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\bin\Debug\net6.0\06_Interfaces.exe
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\bin\Debug\net6.0\06_Interfaces.deps.json
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\bin\Debug\net6.0\06_Interfaces.runtimeconfig.json
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\bin\Debug\net6.0\06_Interfaces.dll
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\bin\Debug\net6.0\ref\06_Interfaces.dll
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\bin\Debug\net6.0\06_Interfaces.pdb
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\obj\Debug\net6.0\06_Interfaces.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\obj\Debug\net6.0\06_Interfaces.dll
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\obj\Debug\net6.0\ref\06_Interfaces.dll
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\obj\Debug\net6.0\06_Interfaces.pdb
+C:\Users\Hp\source\repos\C_Sharp\06_Interfaces\06_Interfaces\obj\Debug\net6.0\06_Interfaces.genruntimeconfig.cache

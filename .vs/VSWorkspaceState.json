@@ -1,6 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\01_Classes",
+    "\\01_Classes\\Task1",
+    "\\01_Classes\\Task2",
+    "\\04_Inheritance",
+    "\\04_Inheritance\\Inheritance",
+    "\\05_Polymorphism",
+    "\\05_Polymorphism\\05_Polymorphism",
+    "\\06_Interfaces"
   ],
+  "SelectedNode": "\\01_Classes\\Task1\\Task1.sln",
   "PreviewInSolutionExplorer": false
 }
