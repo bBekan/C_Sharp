@@ -1,0 +1,13 @@
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\bin\Debug\dbFirst.exe.config
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\bin\Debug\dbFirst.exe
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\bin\Debug\dbFirst.pdb
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\bin\Debug\EntityFramework.dll
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\bin\Debug\EntityFramework.xml
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\obj\Debug\dbFirst.csproj.AssemblyReference.cache
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\obj\Debug\dbFirst.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\obj\Debug\dbFirst.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\obj\Debug\dbFirst.csproj.CopyComplete
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\obj\Debug\dbFirst.exe
+C:\Users\Hp\Source\Repos\C_Sharp\dbFirst\obj\Debug\dbFirst.pdb
