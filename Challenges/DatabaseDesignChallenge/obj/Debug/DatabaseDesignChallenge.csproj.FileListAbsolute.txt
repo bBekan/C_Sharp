@@ -1,0 +1,16 @@
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\obj\Debug\DatabaseDesignChallenge.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\obj\Debug\DatabaseDesignChallenge.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\obj\Debug\DatabaseDesignChallenge.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\bin\Debug\DatabaseDesignChallenge.exe.config
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\bin\Debug\DatabaseDesignChallenge.exe
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\bin\Debug\DatabaseDesignChallenge.pdb
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\bin\Debug\EntityFramework.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\bin\Debug\EntityFramework.xml
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\obj\Debug\DatabaseDesignChallenge.csproj.CopyComplete
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\obj\Debug\DatabaseDesignChallenge.exe
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\obj\Debug\DatabaseDesignChallenge.pdb
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\obj\Debug\DatabaseDesignChallenge.Migrations.databaseCreation.resources
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\obj\Debug\DatabaseDesignChallenge.csproj.GenerateResource.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\DatabaseDesignChallenge\obj\Debug\DatabaseDesignChallenge.Migrations.updateRelations.resources

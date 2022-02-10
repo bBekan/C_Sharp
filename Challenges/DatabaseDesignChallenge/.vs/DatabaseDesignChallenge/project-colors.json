@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "18bd0ad0-6e82-41e7-9071-deb70b8f7414": {
+      "ProjectGuid": "18bd0ad0-6e82-41e7-9071-deb70b8f7414",
+      "DisplayName": "DatabaseDesignChallenge",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

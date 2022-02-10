@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uPfekqz2/g7aBb1Q51M3IY8a3arKfw2WUaG2cOenzD1i9PTZZyoPc1irX6NtOLlvpHQhGVtfxS5/hBGOZpc4zw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Hp\\source\\repos\\C_Sharp\\Challenges\\FizzBuzz\\FizzBuzz.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}

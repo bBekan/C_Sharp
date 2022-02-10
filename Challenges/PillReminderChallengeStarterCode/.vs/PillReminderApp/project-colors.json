@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "99935dfc-b5f0-4095-ba04-d6fa87b13b8c": {
+      "ProjectGuid": "99935dfc-b5f0-4095-ba04-d6fa87b13b8c",
+      "DisplayName": "PillReminderUI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

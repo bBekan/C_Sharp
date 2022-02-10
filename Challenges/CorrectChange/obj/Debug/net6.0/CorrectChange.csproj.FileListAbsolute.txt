@@ -1,0 +1,15 @@
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\bin\Debug\net6.0\CorrectChange.exe
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\bin\Debug\net6.0\CorrectChange.deps.json
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\bin\Debug\net6.0\CorrectChange.runtimeconfig.json
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\bin\Debug\net6.0\CorrectChange.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\bin\Debug\net6.0\ref\CorrectChange.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\bin\Debug\net6.0\CorrectChange.pdb
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\obj\Debug\net6.0\CorrectChange.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\obj\Debug\net6.0\CorrectChange.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\obj\Debug\net6.0\CorrectChange.AssemblyInfoInputs.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\obj\Debug\net6.0\CorrectChange.AssemblyInfo.cs
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\obj\Debug\net6.0\CorrectChange.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\obj\Debug\net6.0\CorrectChange.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\obj\Debug\net6.0\ref\CorrectChange.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\obj\Debug\net6.0\CorrectChange.pdb
+C:\Users\Hp\source\repos\C_Sharp\Challenges\CorrectChange\obj\Debug\net6.0\CorrectChange.genruntimeconfig.cache

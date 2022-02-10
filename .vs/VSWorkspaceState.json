@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\EntityFramework",
-    "\\EntityFramework\\LINQ"
+    "\\Challenges"
   ],
-  "SelectedNode": "\\EntityFramework\\LINQ\\Vidzy.sln",
+  "SelectedNode": "\\Challenges",
   "PreviewInSolutionExplorer": false
 }

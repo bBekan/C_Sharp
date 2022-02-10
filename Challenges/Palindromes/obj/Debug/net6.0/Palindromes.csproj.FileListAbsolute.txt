@@ -1,0 +1,15 @@
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\bin\Debug\net6.0\Palindromes.exe
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\bin\Debug\net6.0\Palindromes.deps.json
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\bin\Debug\net6.0\Palindromes.runtimeconfig.json
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\bin\Debug\net6.0\Palindromes.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\bin\Debug\net6.0\ref\Palindromes.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\bin\Debug\net6.0\Palindromes.pdb
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\obj\Debug\net6.0\Palindromes.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\obj\Debug\net6.0\Palindromes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\obj\Debug\net6.0\Palindromes.AssemblyInfoInputs.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\obj\Debug\net6.0\Palindromes.AssemblyInfo.cs
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\obj\Debug\net6.0\Palindromes.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\obj\Debug\net6.0\Palindromes.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\obj\Debug\net6.0\ref\Palindromes.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\obj\Debug\net6.0\Palindromes.pdb
+C:\Users\Hp\source\repos\C_Sharp\Challenges\Palindromes\obj\Debug\net6.0\Palindromes.genruntimeconfig.cache
