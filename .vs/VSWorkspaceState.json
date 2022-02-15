@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Challenges"
+    "\\Challenges",
+    "\\Challenges\\CorrectChange",
+    "\\Challenges\\Palindromes"
   ],
-  "SelectedNode": "\\Challenges",
+  "SelectedNode": "\\Challenges\\PrimeNumbers",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,15 @@
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\bin\Debug\net6.0\WordCount.exe
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\bin\Debug\net6.0\WordCount.deps.json
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\bin\Debug\net6.0\WordCount.runtimeconfig.json
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\bin\Debug\net6.0\WordCount.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\bin\Debug\net6.0\ref\WordCount.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\bin\Debug\net6.0\WordCount.pdb
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\obj\Debug\net6.0\WordCount.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\obj\Debug\net6.0\WordCount.AssemblyInfoInputs.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\obj\Debug\net6.0\WordCount.AssemblyInfo.cs
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\obj\Debug\net6.0\WordCount.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\obj\Debug\net6.0\WordCount.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\obj\Debug\net6.0\ref\WordCount.dll
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\obj\Debug\net6.0\WordCount.pdb
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\obj\Debug\net6.0\WordCount.genruntimeconfig.cache
+C:\Users\Hp\source\repos\C_Sharp\Challenges\WordCount\obj\Debug\net6.0\WordCount.csproj.AssemblyReference.cache
