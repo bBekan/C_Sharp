@@ -1,5 +1,4 @@
-﻿using System.Text.RegularExpressions;
-using WordCount;
+﻿using WordCount;
 
 string[] tests = new string[]
 {
@@ -29,7 +28,7 @@ foreach(var s in tests)
         Console.WriteLine("Total Characters: {0}", textAnalyzer.NumberOfCharacters);
         Console.WriteLine("Character count (minus line returns and spaces): {0}", textAnalyzer.NumberOfAsciiCharacters);
         Console.WriteLine("Most used word: {0} ({1} times)", mostUsedWord, textAnalyzer.Words[mostUsedWord]);
-        Console.WriteLine("Most used word: {0} ({1} times)", mostUsedChar, textAnalyzer.Characters[mostUsedChar]);
+        Console.WriteLine("Most used character: {0} ({1} times)", mostUsedChar, textAnalyzer.Characters[mostUsedChar]);
         Console.WriteLine();
     }
     catch(Exception e)
