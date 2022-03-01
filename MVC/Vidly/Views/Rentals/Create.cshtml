@@ -1,0 +1,64 @@
+﻿@using Vidly.ViewModels
+@model CustomerMovieRental
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Rental</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group pb-1">
+                <select class="form-select" asp-for="CustomerId" required>
+                    <option selected value = "">Select Customer</option>
+                    @foreach (var customer in @Model.Customers)
+                    {
+                        <option value="@customer.Id">@customer.Name</option>
+                    }
+                    <span asp-validation-for="CustomerId" class="text-danger"></span>
+                </select>
+            </div>
+            <div></div>
+            <div class="form-group">
+                <select class="form-select" asp-for="MovieId" required>
+                    <option selected value = "">Select Movie</option>
+                    @foreach (var movie in @Model.Movies.Where(m => m.NumberAvailable > 0))
+                    {
+                        <option value="@movie.Id">@movie.Name</option>
+                    }
+                    <span asp-validation-for="MovieId" class="text-danger"></span>
+                </select>
+            </div>
+            <div></div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+<div class = "col-md-2 mt-4">
+    @if (@Model.Rentals.Count() != 0)
+{
+    <h1>Rented movies</h1>
+    <hr />
+    <ul class="list-group">
+        @foreach (var rental in @Model.Rentals)
+        {
+            <li class="list-group-item disabled">@rental.Movie.Name</li>
+        }
+    </ul>
+}
+</div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}

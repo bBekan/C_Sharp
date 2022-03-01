@@ -1,0 +1,54 @@
+﻿@model Vidly.ViewModels.CustomerMembership
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Customer.Name" class="control-label"></label>
+                <input asp-for="Customer.Name" class="form-control" />
+                <span asp-validation-for="Customer.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Customer.IsSubscribedToNewsletter" /> @Html.DisplayNameFor(model => model.Customer.IsSubscribedToNewsletter)
+                </label>
+            </div>
+            <select class="form-select" asp-for="Customer.MembershipId">
+                <option selected>Select Membership</option>
+                @foreach (var membership in @Model.Memberships)
+                {
+                    <option value="@membership.Id">@membership.Name</option>
+                }
+                <span asp-validation-for="Customer.MembershipId" class="text-danger"></span>
+            </select>
+            <div class="form-group">
+                <label asp-for="Customer.Birthdate" class="control-label"></label>
+                <input asp-for="Customer.Birthdate" class="form-control" />
+                <span asp-validation-for="Customer.Birthdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@Html.HiddenFor(m => m.Customer.Membership)
+@Html.HiddenFor(m => m.Customer.Id)
+@Html.AntiForgeryToken()
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
