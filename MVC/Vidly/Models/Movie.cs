@@ -30,5 +30,15 @@ namespace Vidly.Models
 
         [Display(Name = "Number available")]
         public byte NumberAvailable { get; set; }
+
+        public string GetDateAdded()
+        {
+            return DateAdded.ToShortDateString();
+        }
+
+        public string GetReleaseDate()
+        {
+            return ReleaseDate.ToShortDateString();
+        }
     }
 }

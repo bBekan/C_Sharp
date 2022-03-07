@@ -104,6 +104,7 @@ namespace Vidly.Areas.Identity.Pages.Account
             [Display(Name = "Phone Number")]
             public string PhoneNumber { get; set; }
 
+            [Required]
             [Display(Name = "Driving License")]
             [StringLength(50, ErrorMessage = "The driving license shouldn't be longer than 50 characters")]
             public string DrivingLicense { get; set; }

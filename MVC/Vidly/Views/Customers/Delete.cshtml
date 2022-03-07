@@ -1,8 +1,11 @@
-﻿@model Vidly.Models.Customer
+﻿@model Vidly.ViewModels.CustomerMembership
 
 @{
     ViewData["Title"] = "Delete";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string birthdate = Model.Customer.GetDate();
+    string membership = Model.Memberships.Single(m => m.Id == Model.Customer.MembershipId).Name;
+
 }
 
 <h1>Delete</h1>
@@ -13,33 +16,33 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Customer.Name)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.Customer.Name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IsSubscribedToNewsletter)
+            @Html.DisplayNameFor(model => model.Customer.IsSubscribedToNewsletter)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IsSubscribedToNewsletter)
+            @Html.DisplayFor(model => model.Customer.IsSubscribedToNewsletter)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MembershipId)
+            @Html.DisplayNameFor(model => membership)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MembershipId)
+            @Html.DisplayFor(model => membership)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Birthdate)
+            @Html.DisplayNameFor(model => Model.Customer.Birthdate)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Birthdate)
+            @Html.DisplayFor(model => birthdate)
         </dd>
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="Customer.Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>

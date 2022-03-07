@@ -15,6 +15,11 @@ namespace Vidly.Models
         [Display(Name = "Membership Type")]
         public byte MembershipId { get; set; }
         [Display(Name = "Date of Birth")]
-        public DateTime? Birthdate { get; set; }
+        public DateTime? Birthdate{ get; set;}
+
+        public string GetDate()
+        {
+            return Birthdate.Value.ToShortDateString();
+        }
     }
 }

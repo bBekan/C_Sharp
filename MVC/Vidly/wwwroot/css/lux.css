@@ -355,6 +355,8 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    height:50%;
+    width:50%;
 }
 
 button,
@@ -2851,12 +2853,14 @@ textarea.form-control-lg {
 
 .form-floating {
     position: relative;
+    padding-bottom: 5px;
 }
 
     .form-floating > .form-control,
     .form-floating > .form-select {
         height: 3.5rem;
         line-height: 1.25;
+
     }
 
     .form-floating > label {
@@ -3219,9 +3223,12 @@ textarea.form-control-lg {
     }
 
 .btn {
+    min-width: 80px;
+    max-width: 120px;
     display: inline-block;
     font-weight: 600;
-    line-height: 1.5rem;
+    line-height: 20px;
+    width
     color: #55595c;
     text-align: center;
     text-decoration: none;
@@ -3234,7 +3241,7 @@ textarea.form-control-lg {
     background-color: transparent;
     border: 0 solid transparent;
     padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1 rem;
     border-radius: 0;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -3843,7 +3850,8 @@ fieldset:disabled .btn {
     }
 
 .btn-lg, .btn-group-lg > .btn {
-    padding: 2rem 2rem;
+    padding: 1rem 1rem;
+
     font-size: 1.25rem;
     border-radius: 0;
 }

@@ -29,6 +29,7 @@ namespace Vidly.Controllers
         // GET: Customers
         public async Task<IActionResult> Index()
         {
+
             return View(await _context.Customer.Include(typeof(Membership).Name).ToListAsync());
         }
 
@@ -46,8 +47,13 @@ namespace Vidly.Controllers
             {
                 return NotFound();
             }
+            var customerWithMembership = new CustomerMembership()
+            {
+                Customer = customer,
+                Memberships = _context.Memberships.ToList()
+            };
 
-            return View(customer);
+            return View(customerWithMembership);
         }
 
         // GET: Customers/Create
@@ -68,8 +74,6 @@ namespace Vidly.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Customer customer)
         {
-            var roleStore = new RoleStore<IdentityRole>(_context);
-            var roleManager = new RoleManager<IdentityRole>(roleStore);
             customer.Membership = _context.Memberships.SingleOrDefault(m => m.Id == customer.MembershipId);
             ModelState.Remove("customer.Membership");
             if (ModelState.IsValid)
@@ -100,7 +104,13 @@ namespace Vidly.Controllers
             {
                 return NotFound();
             }
-            return View(customer);
+            var customerWithMembership = new CustomerMembership()
+            {
+                Customer = customer,
+                Memberships = _context.Memberships.ToList()
+            };
+
+            return View(customerWithMembership);
         }
 
         // POST: Customers/Edit/5
@@ -108,8 +118,10 @@ namespace Vidly.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,IsSubscribedToNewsletter,MembershipTypeId,Birthdate")] Customer customer)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,IsSubscribedToNewsletter,MembershipId,Birthdate")] Customer customer)
         {
+            customer.Membership = _context.Memberships.Single(m => m.Id == customer.MembershipId);
+            ModelState.Remove("customer.Membership");
             if (id != customer.Id)
             {
                 return NotFound();
@@ -135,7 +147,13 @@ namespace Vidly.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(customer);
+            var customerWithMembership = new CustomerMembership()
+            {
+                Customer = customer,
+                Memberships = _context.Memberships.ToList()
+            };
+
+            return View(customerWithMembership);
         }
 
         // GET: Customers/Delete/5
@@ -153,7 +171,13 @@ namespace Vidly.Controllers
                 return NotFound();
             }
 
-            return View(customer);
+            var customerWithMembership = new CustomerMembership()
+            {
+                Customer = customer,
+                Memberships = _context.Memberships.ToList()
+            };
+
+            return View(customerWithMembership);
         }
 
         // POST: Customers/Delete/5
