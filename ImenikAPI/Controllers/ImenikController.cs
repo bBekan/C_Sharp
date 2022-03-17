@@ -1,6 +1,7 @@
 ﻿using ImenikAPI.Models;
 using ImenikAPI.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Net;
 
 namespace ImenikAPI.Controllers
@@ -46,15 +47,14 @@ namespace ImenikAPI.Controllers
         /// </summary>
         /// <param name="user"></param>
         [HttpPost( Name = "AddUser")]
-        public IActionResult Add([FromBody] PersonViewModel user)
+        public async Task<IActionResult> AddAsync([FromBody] PersonViewModel user)
         {
-            var county = _context.Counties.SingleOrDefault(c => c.Id == user.CountyId);
-            var country = _context.Countries.SingleOrDefault(c => c.Id == user.CountryId);
+            var country = await _context.Countries.Include(c => c.Counties).SingleOrDefaultAsync(c => c.Id == user.CountryId);
+            if (country == null) return NotFound("There is no country with id " + user.CountryId);
 
-            if(county == null || user == null)
-            {
-                return NotFound();
-            }
+            var county = country.Counties.SingleOrDefault(c => c.Id == user.CountyId);
+            if (county == null) return NotFound("There is no county with id " + user.CountyId);
+
             var newUser = new Person()
             {
                 Id = _context.Users.Count() == 0 ? 1 : _context.Users.Last().Id + 1,
@@ -83,17 +83,17 @@ namespace ImenikAPI.Controllers
         /// <param name="user"></param>
         /// <returns></returns>
         [HttpPut]
-        public IActionResult Edit(int id, PersonViewModel user)
+        public async Task<IActionResult> EditAsync(int id, PersonViewModel user)
         {
             var oldUser = _context.Users.SingleOrDefault(u => u.Id == id);
-            var country = _context.Countries.SingleOrDefault(c => c.Id == user.CountryId);
-            Console.WriteLine(country.Counties.Count());
-            foreach (var c in country.Counties.ToList()) Console.WriteLine(c.Name);
+            if (oldUser == null) return NotFound("There is no user with id " + id);
+
+            var country = await _context.Countries.Include(c => c.Counties).SingleOrDefaultAsync(c => c.Id == user.CountryId);
+            if (country == null) return NotFound("There is no country with id " + user.CountryId);
+
             var county = country.Counties.SingleOrDefault(c => c.Id == user.CountyId);
-            if (oldUser == null || country == null || county == null)
-            {
-                return NotFound();
-            }
+            if (county == null) return NotFound("There is no county with id " + user.CountyId);
+
             if (ModelState.IsValid)
             {
                 oldUser.Name = user.Name;

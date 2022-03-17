@@ -20,5 +20,15 @@ namespace ImenikAPI.Models
         public Country Country { get; set; }
         [Required]
         public int CountryId { get; set; }
+        [JsonIgnore]
+        public List<Person> Residents { get; set; }
+        [JsonIgnore]
+        public List<AdditionalData> AdditionalData { get; set; }
+
+        public County()
+        {
+            Residents = new List<Person>();
+            AdditionalData = new List<AdditionalData>();
+        }
     }
 }

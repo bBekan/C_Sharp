@@ -15,14 +15,23 @@ namespace ImenikAPI.Models
         [Required]
         public string IsInEu { get; set; }
         [JsonIgnore]
-        public List<County>? Counties { get; set; }
+        public List<County> Counties { get; set; }
         [JsonIgnore]
-        public List<Person>? Citizens { get; set; }
+        public List<Person> Citizens { get; set; }
+        [JsonIgnore]
+        public List<AdditionalData> AdditionalData { get; set; }
 
         public Country()
         {
             Counties = new List<County>();
             Citizens = new List<Person>();
+            AdditionalData = new List<AdditionalData>();
+        }
+
+        public bool HasCounty(int countyId)
+        {
+            if (Counties.SingleOrDefault(c => c.Id == countyId) == null) return false;
+            return true;
         }
     }
 }

@@ -15,8 +15,7 @@ var DbContextOptions = new DbContextOptionsBuilder<InMemoryDbContext>()
     .Options;
 
 var populate = new PopulateWithData(new InMemoryDbContext(DbContextOptions));
-populate.PopulateCountries();
-populate.PopulateCounties();
+populate.PopulateData();
 
 // Add services to the container.
 builder.Services

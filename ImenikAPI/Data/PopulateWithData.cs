@@ -10,100 +10,99 @@ namespace ImenikAPI.Scripts
             _context = context;
         }
 
-        public void PopulateCountries()
+        public void PopulateData()
         {
-            List<Country> countries = new List<Country>();
-            countries.Add(new Country()
+            var Croatia = new Country()
             {
                 Id = 1,
                 Name = "Croatia",
                 Abbreviation = "CRO",
                 IsInEu = "EU"
-            });
+            };
+            _context.Add(Croatia);
 
-            countries.Add(new Country()
+            var UnitedKingdom= new Country()
             {
                 Id = 2,
                 Name = "United Kingdom",
                 Abbreviation = "UK",
                 IsInEu = "Other countries"
-            });
+            };
+            _context.Add(UnitedKingdom);
 
-            countries.Add(new Country()
+            var USA = new Country()
             {
                 Id = 3,
                 Name = "United States of America",
                 Abbreviation = "USA",
                 IsInEu = "Other countries"
-            });
+            };
+            _context.Add(USA);
 
-            countries.Add(new Country()
+            var Spain = new Country()
             {
                 Id = 4,
                 Name = "Spain",
                 Abbreviation = "ES",
                 IsInEu = "EU"
-            });
+            };
+            _context.Add(Spain);
 
-            _context.Countries.AddRange(countries);
-            _context.SaveChanges();
-        }
-
-        public void PopulateCounties()
-        {
-            List<County> counties = new List<County>();
-            counties.Add(new County()
+            var GradZagreb = new County()
             {
                 Id = 1,
                 Name = "Grad Zagreb",
                 Abbreviation = "GZ",
-                CountryId = 1,
-                Country = _context.Countries.Single(c => c.Id == 1),
+                CountryId = Croatia.Id,
+                Country = Croatia,
                 AreaCode = "10000",
 
-            }) ;
+            };
+            _context.Add(GradZagreb);
 
-            counties.Add(new County()
+            var SibenskoKninska = new County()
             {
                 Id = 2,
                 Name = "Šibensko-Kninska",
                 Abbreviation = "ŠK",
-                CountryId = 1,
-                Country = _context.Countries.Single(c => c.Id == 1),
+                CountryId = Croatia.Id,
+                Country = Croatia,
                 AreaCode = "22000",
+            };
+            _context.Add(SibenskoKninska);
 
-            });
-            counties.Add(new County()
+            var Bristol = new County()
             {
                 Id = 3,
                 Name = "Bristol",
                 Abbreviation = "BRI",
-                CountryId = 2,
-                Country = _context.Countries.Single(c => c.Id == 2),
+                CountryId = UnitedKingdom.Id,
+                Country = UnitedKingdom,
                 AreaCode = "0117",
-            });
+            };
+            _context.Add(Bristol);
 
-            counties.Add(new County()
+            var LosAngeles = new County()
             {
                 Id = 4,
                 Name = "Los Angeles County",
                 Abbreviation = "LAC",
-                CountryId = 3,
-                Country = _context.Countries.Single(c => c.Id == 3),
+                CountryId = USA.Id,
+                Country = USA,
                 AreaCode = "213",
-            });
+            };
+            _context.Add(LosAngeles);
 
-            counties.Add(new County()
+            var Andalusia = new County()
             {
                 Id = 5,
                 Name = "Andalusia",
                 Abbreviation = "AND",
-                CountryId = 4,
-                Country = _context.Countries.Single(c => c.Id == 4),
+                CountryId = Spain.Id,
+                Country = Spain,
                 AreaCode = "334"
-            });
-
-            _context.Counties.AddRange(counties);
+            };
+            _context.Add(Andalusia);
             _context.SaveChanges();
         }
     }

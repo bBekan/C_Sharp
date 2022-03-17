@@ -1,5 +1,6 @@
 ﻿using ImenikAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Data.Entity;
 
 namespace ImenikAPI.Controllers
 {
@@ -21,7 +22,7 @@ namespace ImenikAPI.Controllers
         [HttpGet(Name = "GetCounty")]
         public IEnumerable<County> Get()
         {
-            return _context.Counties.ToArray();
+            return _context.Counties.Include(c => c.Country).ToArray(); ;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using ImenikAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ImenikAPI.Controllers
 {
@@ -18,9 +19,9 @@ namespace ImenikAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet(Name = "Get Country")]
-        public IEnumerable<Country> Get()
+        public async Task<IEnumerable<Country>> GetAsync()
         {
-            var countries = _context.Countries.ToArray();
+            var countries = await _context.Countries.Include(c => c.Counties).ToListAsync();
             return countries;
         }
     }
