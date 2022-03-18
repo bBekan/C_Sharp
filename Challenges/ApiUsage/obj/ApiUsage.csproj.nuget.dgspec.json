@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\source\\repos\\C_Sharp\\Challenges\\ApiUsage\\ApiUsage.csproj": {}
+    "C:\\Users\\Hp\\Source\\Repos\\C_Sharp\\Challenges\\ApiUsage\\ApiUsage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\source\\repos\\C_Sharp\\Challenges\\ApiUsage\\ApiUsage.csproj": {
+    "C:\\Users\\Hp\\Source\\Repos\\C_Sharp\\Challenges\\ApiUsage\\ApiUsage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\C_Sharp\\Challenges\\ApiUsage\\ApiUsage.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Source\\Repos\\C_Sharp\\Challenges\\ApiUsage\\ApiUsage.csproj",
         "projectName": "ApiUsage",
-        "projectPath": "C:\\Users\\Hp\\source\\repos\\C_Sharp\\Challenges\\ApiUsage\\ApiUsage.csproj",
+        "projectPath": "C:\\Users\\Hp\\Source\\Repos\\C_Sharp\\Challenges\\ApiUsage\\ApiUsage.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\source\\repos\\C_Sharp\\Challenges\\ApiUsage\\obj\\",
+        "outputPath": "C:\\Users\\Hp\\Source\\Repos\\C_Sharp\\Challenges\\ApiUsage\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
