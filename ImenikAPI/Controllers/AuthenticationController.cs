@@ -27,7 +27,11 @@ namespace ImenikAPI.Controllers
 
             AddAdmin();
         }
-
+        /// <summary>
+        /// Login
+        /// </summary>
+        /// <param name="loginUser"></param>
+        /// <returns></returns>
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginModel loginUser)
         {
@@ -40,6 +44,7 @@ namespace ImenikAPI.Controllers
                 var authClaims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.UserName),
+                    new Claim(ClaimTypes.Email, user.Email),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 };
 
@@ -51,9 +56,7 @@ namespace ImenikAPI.Controllers
                 var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
 
                 var token = new JwtSecurityToken(
-                    issuer: _configuration["JWT:ValidIssuer"],
-                    audience: _configuration["JWT:ValidAudience"],
-                    expires: DateTime.Now.AddHours(3),
+                    expires: DateTime.Now.AddMinutes(30),
                     claims: authClaims,
                     signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
                     );
@@ -67,7 +70,11 @@ namespace ImenikAPI.Controllers
             return Unauthorized();
 
         }
-
+        /// <summary>
+        /// Register user
+        /// </summary>
+        /// <param name="registerUser"></param>
+        /// <returns></returns>
         [HttpPost("register/user")]
         public async Task<IActionResult> Register(RegisterModel registerUser)
         {
@@ -95,7 +102,11 @@ namespace ImenikAPI.Controllers
 
             return Ok("User created successfully!");
         }
-
+        /// <summary>
+        /// Register admin
+        /// </summary>
+        /// <param name="registerUser"></param>
+        /// <returns></returns>
         [HttpPost("register/admin")]
         [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> RegisterAdmin(RegisterModel registerUser)
@@ -126,9 +137,9 @@ namespace ImenikAPI.Controllers
             return Ok("User created successfully!");
         }
         [ApiExplorerSettings(IgnoreApi = true)]
-        private async void AddAdmin()
+        public async void AddAdmin()
         {
-            if (await userManager.FindByNameAsync("admin") != null)
+            if (await userManager.FindByNameAsync("admin") == null)
             {
                 AppUser user = new AppUser()
                 {
@@ -136,7 +147,7 @@ namespace ImenikAPI.Controllers
                     SecurityStamp = Guid.NewGuid().ToString(),
                     UserName = "admin"
                 };
-                var result = await userManager.CreateAsync(user, "@dm1N");
+                var result = await userManager.CreateAsync(user, "@dMIN123");
 
 
                 if (!await roleManager.RoleExistsAsync(Roles.Admin))

@@ -19,6 +19,11 @@ var DbContextOptions = new DbContextOptionsBuilder<InMemoryDbContext>()
 var populate = new PopulateWithData(new InMemoryDbContext(DbContextOptions));
 populate.PopulateData();
 
+builder.Services.AddDbContext<InMemoryDbContext>(option => option.UseInMemoryDatabase(connectionString));
+builder.Services.AddIdentity<AppUser, IdentityRole>()
+    .AddEntityFrameworkStores<InMemoryDbContext>()
+    .AddDefaultTokenProviders();
+
 // Add services to the container.
 builder.Services
     .AddControllers(options => options.UseDateOnlyTimeOnlyStringConverters())
@@ -81,20 +86,13 @@ builder.Services.AddAuthentication(opt =>
     opt.RequireHttpsMetadata = false;
     opt.TokenValidationParameters = new TokenValidationParameters()
     {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidAudience = configuration["JWT:ValidAudience"],
-        ValidIssuer = configuration["JWT:ValidIssuer"],
+        ValidateIssuer = false,
+        ValidateAudience = false,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
     };
 });
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddDbContext<InMemoryDbContext>(option => option.UseInMemoryDatabase(connectionString));
-builder.Services.AddIdentity<AppUser, IdentityRole>()
-    .AddEntityFrameworkStores<InMemoryDbContext>()
-    .AddDefaultTokenProviders();
-
 
 var app = builder.Build();
 

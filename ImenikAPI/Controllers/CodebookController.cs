@@ -22,7 +22,7 @@ namespace ImenikAPI.Controllers
         /// <returns></returns>
 
         [HttpGet("countries")]
-        [Authorize(Roles = Roles.User)]
+        //[Authorize(Roles = Roles.User)]
         public async Task<IEnumerable<Country>> GetCountriesAsync()
         { 
             return await _context.Countries.Include(c => c.Counties).ToListAsync();
