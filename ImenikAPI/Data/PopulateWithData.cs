@@ -1,4 +1,5 @@
-﻿using ImenikAPI.Models;
+﻿using ImenikAPI.Areas.Identity.Data;
+using ImenikAPI.Models;
 
 namespace ImenikAPI.Scripts
 {

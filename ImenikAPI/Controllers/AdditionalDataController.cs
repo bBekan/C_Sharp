@@ -1,5 +1,6 @@
 ﻿using ImenikAPI.Models;
 using ImenikAPI.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,7 @@ namespace ImenikAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("{id}")]
+        [Authorize(Roles = Roles.User)]
         public async Task<IActionResult> GetAsync(int id)
         {
             var user = await _context.Users.SingleOrDefaultAsync(u => u.Id == id);
@@ -41,6 +43,7 @@ namespace ImenikAPI.Controllers
         /// <param name="additionalData"></param>
         /// <returns></returns>
         [HttpPost("{id}")]
+        [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> PostAsync(int id, AdditionalDataViewModel additionalData)
         {
             var hasData = _context.AdditionalData
@@ -100,6 +103,7 @@ namespace ImenikAPI.Controllers
         /// <param name="additionalData"></param>
         /// <returns></returns>
         [HttpPut("id")]
+        [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> EditAsync(int id, AdditionalDataViewModel additionalData)
         {
             var user = await _context.AdditionalData.SingleOrDefaultAsync(d => d.UserId == id);
@@ -147,6 +151,7 @@ namespace ImenikAPI.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("{id}")]
+        [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var user = await _context.Users.SingleOrDefaultAsync(u => u.Id == id);

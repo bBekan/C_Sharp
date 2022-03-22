@@ -1,5 +1,6 @@
 ﻿using ImenikAPI.Models;
 using ImenikAPI.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
@@ -16,11 +17,13 @@ namespace ImenikAPI.Controllers
         {
             _context = context;
         }
+
         /// <summary>
         /// Retrieves all users 
         /// </summary>
         /// <returns></returns>
         [HttpGet(Name = "GetAllUsers")]
+        [Authorize(Roles = Roles.User)]
         public IEnumerable<Person> Get()
         {
             return _context.Users;
@@ -32,6 +35,7 @@ namespace ImenikAPI.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}", Name = "GetUserById")]
+        [Authorize(Roles = Roles.User)]
         public IActionResult Get(int id)
         {
             var user = _context.Users.SingleOrDefault(u => u.Id == id);
@@ -47,6 +51,7 @@ namespace ImenikAPI.Controllers
         /// </summary>
         /// <param name="user"></param>
         [HttpPost( Name = "AddUser")]
+        [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> AddAsync([FromBody] PersonViewModel user)
         {
             var country = await _context.Countries.Include(c => c.Counties).SingleOrDefaultAsync(c => c.Id == user.CountryId);
@@ -83,6 +88,7 @@ namespace ImenikAPI.Controllers
         /// <param name="user"></param>
         /// <returns></returns>
         [HttpPut]
+        [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> EditAsync(int id, PersonViewModel user)
         {
             var oldUser = _context.Users.SingleOrDefault(u => u.Id == id);
@@ -119,6 +125,7 @@ namespace ImenikAPI.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("{id}", Name = "DeleteUser")]
+        [Authorize(Roles = Roles.Admin)]
         public IActionResult Delete(int id)
         {
             Person user = _context.Users.SingleOrDefault(u => u.Id == id);

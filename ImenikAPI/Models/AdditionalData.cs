@@ -18,7 +18,7 @@ namespace ImenikAPI.Models
         public string? Email { get; set; }
         [DefaultValue("CountyId")]
         public int? CountyId { get; set; }
-        [JsonIgnore]
+        [JsonIgnore]   
         public County? County { get; set; }
         [DefaultValue("CountryId")]
         public int? CountryId { get; set; }
