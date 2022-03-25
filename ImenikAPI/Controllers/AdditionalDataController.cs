@@ -22,9 +22,12 @@ namespace ImenikAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("{id}")]
-        [Authorize(Roles = Roles.User)]
+        [Authorize(Roles = Roles.User + "," + Roles.Admin)]
         public async Task<IActionResult> GetAsync(int id)
         {
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
             var user = await _context.Users.SingleOrDefaultAsync(u => u.Id == id);
             if (user == null) 
                 return NotFound("There is no user with id " + id);
@@ -46,6 +49,9 @@ namespace ImenikAPI.Controllers
         [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> PostAsync(int id, AdditionalDataViewModel additionalData)
         {
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
             var hasData = _context.AdditionalData
                 .SingleOrDefault(u => u.UserId == id);
 
@@ -106,6 +112,9 @@ namespace ImenikAPI.Controllers
         [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> EditAsync(int id, AdditionalDataViewModel additionalData)
         {
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
             var user = await _context.AdditionalData.SingleOrDefaultAsync(d => d.UserId == id);
             if (user == null) return NotFound("There is no additional data of user with id " + id);
 
@@ -154,6 +163,9 @@ namespace ImenikAPI.Controllers
         [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> DeleteAsync(int id)
         {
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
             var user = await _context.Users.SingleOrDefaultAsync(u => u.Id == id);
             if (user == null) return NotFound("There is no user with id " + id);
 

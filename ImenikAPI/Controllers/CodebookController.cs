@@ -22,10 +22,13 @@ namespace ImenikAPI.Controllers
         /// <returns></returns>
 
         [HttpGet("countries")]
-        //[Authorize(Roles = Roles.User)]
-        public async Task<IEnumerable<Country>> GetCountriesAsync()
-        { 
-            return await _context.Countries.Include(c => c.Counties).ToListAsync();
+        [Authorize(Roles = Roles.User + "," + Roles.Admin)]
+        public async Task<IActionResult> GetCountriesAsync()
+        {
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
+            return Ok(await _context.Countries.Include(c => c.Counties).ToListAsync());
         }
 
         /// <summary>
@@ -33,10 +36,13 @@ namespace ImenikAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("counties")]
-        [Authorize(Roles = Roles.User)]
-        public async Task<IEnumerable<County>> GetCountiesAsync()
+        [Authorize(Roles = Roles.User + "," + Roles.Admin)]
+        public async Task<IActionResult> GetCountiesAsync()
         {
-            return await _context.Counties.Include(c => c.Country).ToListAsync();
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
+            return Ok(await _context.Counties.Include(c => c.Country).ToListAsync());
         }
     }
 }

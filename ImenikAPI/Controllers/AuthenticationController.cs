@@ -111,6 +111,9 @@ namespace ImenikAPI.Controllers
         [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> RegisterAdmin(RegisterModel registerUser)
         {
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
             var userExists = await userManager.FindByNameAsync(registerUser.Username);
             if (userExists != null)
                 return Problem("User already exists");

@@ -23,10 +23,13 @@ namespace ImenikAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet(Name = "GetAllUsers")]
-        [Authorize(Roles = Roles.User)]
-        public IEnumerable<Person> Get()
+        [Authorize(Roles = Roles.User + "," + Roles.Admin)]
+        public IActionResult Get()
         {
-            return _context.Users;
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
+            return Ok(_context.Users);
         }
 
         /// <summary>
@@ -35,9 +38,12 @@ namespace ImenikAPI.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}", Name = "GetUserById")]
-        [Authorize(Roles = Roles.User)]
+        [Authorize(Roles = Roles.User + "," + Roles.Admin)]
         public IActionResult Get(int id)
         {
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
             var user = _context.Users.SingleOrDefault(u => u.Id == id);
             if(user == null)
             {
@@ -54,6 +60,9 @@ namespace ImenikAPI.Controllers
         [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> AddAsync([FromBody] PersonViewModel user)
         {
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
             var country = await _context.Countries.Include(c => c.Counties).SingleOrDefaultAsync(c => c.Id == user.CountryId);
             if (country == null) return NotFound("There is no country with id " + user.CountryId);
 
@@ -91,6 +100,9 @@ namespace ImenikAPI.Controllers
         [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> EditAsync(int id, PersonViewModel user)
         {
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
             var oldUser = _context.Users.SingleOrDefault(u => u.Id == id);
             if (oldUser == null) return NotFound("There is no user with id " + id);
 
@@ -128,6 +140,9 @@ namespace ImenikAPI.Controllers
         [Authorize(Roles = Roles.Admin)]
         public IActionResult Delete(int id)
         {
+            if (!User.Identity.IsAuthenticated)
+                return Unauthorized();
+
             Person user = _context.Users.SingleOrDefault(u => u.Id == id);
             if(user == null)
             {
