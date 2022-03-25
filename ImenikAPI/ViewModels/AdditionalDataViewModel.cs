@@ -8,6 +8,8 @@ namespace ImenikAPI.ViewModels
     public class AdditionalDataViewModel
     {
         [DefaultValue(null)]
+        public int? Id { get; set; }
+        [DefaultValue(null)]
         public string? City { get; set; }
         [DefaultValue(null)]
         public string? Street { get; set; }

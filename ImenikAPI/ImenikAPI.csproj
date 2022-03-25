@@ -16,6 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="DateOnlyTimeOnly.AspNet" Version="1.0.2" />
     <PackageReference Include="DateOnlyTimeOnly.AspNet.Swashbuckle" Version="1.0.2" />
     <PackageReference Include="entityframework" Version="6.4.4" />

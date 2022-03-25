@@ -137,7 +137,7 @@ namespace ImenikAPI.Controllers
             await userManager.AddToRoleAsync(user, Roles.Admin);
             await userManager.AddToRoleAsync(user, Roles.User);
 
-            return Ok("User created successfully!");
+            return Ok("Admin created successfully!");
         }
         [ApiExplorerSettings(IgnoreApi = true)]
         public async void AddAdmin()

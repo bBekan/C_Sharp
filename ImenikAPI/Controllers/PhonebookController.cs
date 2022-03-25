@@ -1,4 +1,5 @@
-﻿using ImenikAPI.Models;
+﻿using AutoMapper;
+using ImenikAPI.Models;
 using ImenikAPI.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -49,6 +50,10 @@ namespace ImenikAPI.Controllers
             {
                 return NotFound();
             }
+
+            var mapper = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Person, PersonViewModel>()));
+            var userVM = mapper.Map<PersonViewModel>(user);
+
             return Ok(user);
         }
 

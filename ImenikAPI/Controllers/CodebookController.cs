@@ -1,4 +1,5 @@
 ﻿using ImenikAPI.Models;
+using ImenikAPI.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,8 +28,21 @@ namespace ImenikAPI.Controllers
         {
             if (!User.Identity.IsAuthenticated)
                 return Unauthorized();
+            var countries = await _context.Countries.Include(c => c.Counties).ToListAsync();
+            var countriesVMList = new List<CountryViewModel>();
 
-            return Ok(await _context.Countries.Include(c => c.Counties).ToListAsync());
+            foreach(var country in countries)
+            {
+                countriesVMList.Add(new CountryViewModel()
+                {
+                    Id = country.Id,
+                    Name = country.Name,
+                    Abbreviation = country.Abbreviation,
+                    IsInEu = country.IsInEu
+                });
+            }
+
+            return Ok(countriesVMList);
         }
 
         /// <summary>
@@ -42,7 +56,22 @@ namespace ImenikAPI.Controllers
             if (!User.Identity.IsAuthenticated)
                 return Unauthorized();
 
-            return Ok(await _context.Counties.Include(c => c.Country).ToListAsync());
+            var counties = await _context.Counties.Include(c => c.Country).ToListAsync();
+            var countiesVMList = new List<CountyViewModel>();
+
+            foreach (var county in counties)
+            {
+                countiesVMList.Add(new CountyViewModel()
+                {
+                    Id = county.Id,
+                    Name = county.Name,
+                    Abbreviation = county.Abbreviation,
+                    AreaCode = county.AreaCode,
+                    CountryId = county.CountryId
+                });
+            }
+
+            return Ok(countiesVMList);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using ImenikAPI.Models;
+﻿using AutoMapper;
+using ImenikAPI.Models;
 using ImenikAPI.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -36,7 +37,10 @@ namespace ImenikAPI.Controllers
             if (data == null) 
                 return NotFound("User has no additional data");
 
-            return Ok(data);
+            var mapper = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<AdditionalData, AdditionalDataViewModel>()));
+            var dataVM = mapper.Map<AdditionalDataViewModel>(data);
+
+            return Ok(dataVM);
         }
 
         /// <summary>
@@ -99,7 +103,7 @@ namespace ImenikAPI.Controllers
             };
             _context.Add(data);
             _context.SaveChanges();
-            return Ok(data);
+            return Ok("Data succesfully added");
         }
 
         /// <summary>
@@ -125,7 +129,7 @@ namespace ImenikAPI.Controllers
                 .Include(c => c.Counties)
                 .SingleOrDefault(c => c.Id == countryId);
 
-            if (country == null)
+            if (country == null && countryId != null)
                 return NotFound("There is no country with id " + countryId);
 
             if (countyId != null && !country.HasCounty(countyId))
@@ -136,11 +140,11 @@ namespace ImenikAPI.Controllers
 
             if (ModelState.IsValid)
             {
-                user.City = additionalData.City;
-                user.Street = additionalData.Street;
-                user.HouseNumber = additionalData.HouseNumber;
-                user.PhoneNumber = additionalData.PhoneNumber;
-                user.Email = additionalData.Email;
+                user.City = additionalData.City == null ? user.City : additionalData.City;
+                user.Street = additionalData.Street == null ? user.Street : additionalData.Street;
+                user.HouseNumber = additionalData.HouseNumber == null ? user.HouseNumber : additionalData.HouseNumber;
+                user.PhoneNumber = additionalData.PhoneNumber == null ? user.PhoneNumber : additionalData.PhoneNumber;
+                user.Email = additionalData.Email == null ? user.Email : additionalData.Email;
                 user.CountyId = countyId;
                 user.CountryId = countryId;
                 user.UserId = id;
@@ -150,7 +154,7 @@ namespace ImenikAPI.Controllers
 
 
             _context.SaveChanges();
-            return Ok(user);
+            return Ok("Data succesfully edited");
 
         }
 
@@ -172,7 +176,7 @@ namespace ImenikAPI.Controllers
             _context.Remove(user);
             _context.SaveChanges();
 
-            return Ok("User succesfully deleted");
+            return Ok("User's additional data succesfully deleted");
         }
 
     }
